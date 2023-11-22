@@ -56,5 +56,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ghcr.io/startrooper08/fastapi-chess-fact.slim:latest
+          tags: ghcr.io/startrooper08/fastapi-chess-fact.slim
         
