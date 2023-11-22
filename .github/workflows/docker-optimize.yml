@@ -51,4 +51,10 @@ jobs:
       
       - name: Optimize Docker Image
         run: slim build --target ghcr.io/startrooper08/fastapi-chess-fact:main --http-probe=true --expose 80
+
+      - name: Push Optimized Docker Image to Github Registry
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ghcr.io/startrooper08/fastapi-chess-fact.slim:latest
         
