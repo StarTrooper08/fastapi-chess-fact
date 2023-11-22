@@ -48,4 +48,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      
+      - name: Optimize Docker Image
+        run: slim build --target ghcr.io/startrooper08/fastapi-chess-fact:main --http-probe=true --expose 80
         
