@@ -19,10 +19,10 @@ jobs:
         shell: bash
         run: |
           curl -L -o ds.tar.gz https://downloads.dockerslim.com/releases/1.40.1/dist_linux.tar.gz
-          sudo tar -xvf ds.tar.gz
-          sudo mv dist_linux/docker-slim /usr/local/bin/
-          sudo mv dist_linux/slim-sensor /usr/local/bin/
-          sudo mv dist_linux/slim /usr/local/bin/
+          tar -xvf ds.tar.gz
+          mv dist_linux/docker-slim /usr/local/bin/
+          mv dist_linux/slim-sensor /usr/local/bin/
+          mv dist_linux/slim /usr/local/bin/
       
       - name : update slim
         shell: bash
