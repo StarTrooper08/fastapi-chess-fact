@@ -28,6 +28,11 @@ jobs:
         shell: bash
         run: slim update
 
+      - name: python bandit
+        run: |
+            pip install bandit
+            bandit -r .
+
       - name: Log in to Github Image Registry
         uses: docker/login-action@v3
         with:
